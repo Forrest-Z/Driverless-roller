@@ -1,0 +1,42 @@
+﻿CAN驱动安装及验证通信方法：
+1、进入drive 文件夹，执行（#后面的命令是实际输入的）：
+# make
+2、加载驱动：
+# make install
+3、修改etc/re.local文件：
+#sudo  gedit /etc/rc.local
+将以下内容添加入文档中，并在exit 0 之前
+	modprobe advcan
+	CAN_MAJOR=`awk '$2=="advcan" {print $1}' /proc/devices`
+	mknod /dev/can0 c $CAN_MAJOR 0
+	mknod /dev/can1 c $CAN_MAJOR 1
+	chmod 666 /dev/can0
+	chmod 666 /dev/can1
+4、查看CAN口：
+#ls -l /dev/can*
+此时，若出现的第一、二个CAN0、CAN1为实际can口，表明CAN驱动已装好。
+
+
+5、查看当前CAN口配置：
+#grep . /proc/sys/dev/Can/*
+6、编译 *.c 文件，生成同名的*-nonblock.c文件：
+#sudo make     
+7、进入advcan_source_v2.0.18.0/examples文件夹，修改接收/发送的权限
+#chmod +x receive-nonclock 
+8、打开接收命令：
+# ./ receive-nonclock.c
+即可接收CAN命令
+以上是验证examples中接收/发送命令。
+
+
+
+以下是利用can发送自己编写的命令：
+1、在advcan_source_v2.0.18.0/examples中编写transmit_gps.c文件
+2、生成python可执行的.so 文件
+#gcc -fPIC -shared transmit_gps.c -o transmit_gps.so
+3、在campus_driving/src/中编写 *.py 文件发送的命令
+4、在ros中运行
+#rosrun campus_driving double_transmit.py
+CAN口可发送工控机数据。
+
+

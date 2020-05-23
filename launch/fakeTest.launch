@@ -1,0 +1,15 @@
+<launch>
+	<node pkg="campus_driving" name="fakeSensor" type="fakeSensor.py"  />  
+	<node pkg="campus_driving" name="CAN_receive_test" type="CAN_receive_test.py"  /> 
+	<node pkg="campus_driving" name="CAN_Driver" type="CAN_Driver.py"  /> 	
+
+	<node pkg="campus_driving" name="localPlanning" type="local_planning.py" output="screen"/>
+	<node pkg="campus_driving" name="steer_control" type="steer_control.py" />
+	<include file="$(find gridmap)/launch/chushandian_fake.launch" />
+	<node pkg="campus_driving" name="display" type="display.py" />
+
+	<node pkg="rviz" type="rviz" name="road_display" args="-d $(find campus_driving)/csd.rviz" />
+	<node pkg="tf" name="marker2map" type="static_transform_publisher" args = "0 0 0 0 0 0 /map /gps_marker 10" /> 
+
+</launch> 
+

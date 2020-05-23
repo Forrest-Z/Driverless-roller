@@ -1,0 +1,36 @@
+# 出山店参数文件
+# Date: 2017-11-16
+# Author: qidong
+
+# camera coordinate:
+    # +x point to the right in the image
+    # +y point down in the image
+    # +z point into the plane of the image
+# lidar3d coordinate:
+    # +x point to the right
+    # +y point to the front
+    # +z point to the up
+# vehicle coordinate:
+    # +x point to the front
+    # +y point to the right
+    # +z point to the up
+
+# Parameters of front lidar
+map:
+    globalMapName: 'mapGenLog.txt'   # include dabahoutui1 jiaxiao1217 20171208 <-- 仓库 xueyuan steerTest campus20180206 mapGenLog csd0312
+    mapType: 'processed' # include 'raw', 'processed', used in local_planning.py
+    taskType: 'csdLine' # include 'csdLine', 'csdCircle', 'campus' csd: 只有一条中心触须，遇到障碍物直接停车，不规划绕行
+    simu: False # 指示是否仿真
+    planTrajectory: 'zhi'  #'zhi':“之”字型路径  'ST': small transfer, 即 小错距
+    bigCycle: '6' #从最左侧路径走到最右侧路径，再返回到最左侧路径为 1个大循环 。
+    numAllLane: 4  # 一共几条路线 1
+    distBetweenLane: 2.   # 12
+    timesSingleLane: 2    # 指示每条路线走几趟,一个来回算两趟
+    # X_ORI: 213626.04441005515   # 出山店仓库
+    # Y_ORI: 3573721.0527517283  # 出山店仓库
+    X_ORI: 496337.241  # 出山店仓库，M30坐标系
+    Y_ORI: 3569698.877  # 出山店仓库，M30坐标系
+    # X_ORI: 245529.56042564771  #车库前
+    # Y_ORI: 3380400.6653839252   #车库前
+#    X_ORI: 3573618.4715433163   # 出山店大坝
+#    Y_ORI: 213339.86229128344  # 出山店大坝

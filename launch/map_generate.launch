@@ -1,0 +1,6 @@
+<launch>
+	
+	<node pkg="campus_driving" name="M30" type="M30.py"  /> 
+	<node pkg="campus_driving" name="route_generate" type="route_generate.py"  />	
+</launch> 
+

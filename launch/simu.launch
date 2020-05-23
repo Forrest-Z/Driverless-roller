@@ -1,0 +1,17 @@
+<launch>
+    <rosparam command="load" file="$(find campus_driving)/params/calibParam.yaml" />
+	<node pkg="campus_driving" name="server" type="server.py" />
+	<node pkg="campus_driving" name="velocity_control" type="velocity_control.py" />
+
+	<node pkg="campus_driving" name="local_planning" type="local_planning.py" output="screen"/>
+	<node pkg="campus_driving" name="steer_control" type="steer_control.py"   />
+<!--	<include file="$(find gridmap)/launch/whut_bag.launch" /> -->
+	<node pkg="campus_driving" name="display" type="display.py" />
+    <node pkg="campus_driving" name="rvizSet" type="rvizSet.py" />
+<!--    <node pkg="campus_driving" name="logTopic" type="logTopic.py" />  -->
+
+	<node pkg="tf" name="marker2map" type="static_transform_publisher" args = "0 0 0 0 0 0 /map /gps_marker 10" />
+	<node pkg="rviz" type="rviz" name="road_display" args="-d $(find campus_driving)/csd.rviz" />
+
+
+</launch>

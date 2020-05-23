@@ -1,0 +1,5 @@
+rosbag record -O csd1230.bag //velodyne_points /M30_gps /Double_Antennainsx
+
+用命令行重定向将信息保存到了文本中，是数据保存的一种方法
+rostopic echo /vehState > record2.txt 
+ref: http://blog.csdn.net/yaked/article/details/45534381

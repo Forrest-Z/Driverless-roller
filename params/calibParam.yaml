@@ -1,0 +1,108 @@
+backward:
+  lidar3dGrid_node: {lidar_name: lidar3d_backward}
+  velodyne_backward_nodelet_manager_cloud: {calibration: /home/ai/catkin_ws/src/velodyne/velodyne_pointcloud/params/VLP16db.yaml,
+    max_range: 130.0, min_range: 0.4, view_direction: 0.0, view_width: 6.28318530718}
+  velodyne_backward_nodelet_manager_driver: {device_ip: 192.168.2.202, frame_id: velodyne_backward,
+    model: VLP16, pcap: '', port: 2369, read_fast: false, read_once: false, repeat_delay: 0.0,
+    rpm: 600.0, time_offset: 0.0}
+forward:
+  lidar3dGrid_node: {lidar_name: lidar3d_forward}
+  velodyne_forward_nodelet_manager_cloud: {calibration: /home/ai/catkin_ws/src/velodyne/velodyne_pointcloud/params/VLP16db.yaml,
+    max_range: 130.0, min_range: 0.4, view_direction: 0.0, view_width: 6.28318530718}
+  velodyne_forward_nodelet_manager_driver: {device_ip: 192.168.2.201, frame_id: velodyne_forward,
+    model: VLP16, pcap: '', port: 2368, read_fast: false, read_once: false, repeat_delay: 0.0,
+    rpm: 600.0, time_offset: 0.0}
+local_planning:
+  CALIBRT: {distIsEnd: 5.0, distObstDetect: 9.0, distPreview: 10.0, widthObstDetect: 2.5}
+  GLBflagOpenCalib: 0
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_ai__43487: 'http://ai:43487/', host_ai_desktop__32815: 'http://AI-desktop:32815/',
+    host_ai_desktop__32932: 'http://AI-desktop:32932/', host_ai_desktop__32934: 'http://AI-desktop:32934/',
+    host_ai_desktop__33125: 'http://AI-desktop:33125/', host_ai_desktop__33265: 'http://AI-desktop:33265/',
+    host_ai_desktop__33279: 'http://AI-desktop:33279/', host_ai_desktop__33382: 'http://AI-desktop:33382/',
+    host_ai_desktop__33511: 'http://AI-desktop:33511/', host_ai_desktop__33584: 'http://AI-desktop:33584/',
+    host_ai_desktop__33697: 'http://AI-desktop:33697/', host_ai_desktop__33744: 'http://AI-desktop:33744/',
+    host_ai_desktop__33862: 'http://AI-desktop:33862/', host_ai_desktop__33913: 'http://AI-desktop:33913/',
+    host_ai_desktop__34002: 'http://AI-desktop:34002/', host_ai_desktop__34032: 'http://AI-desktop:34032/',
+    host_ai_desktop__34066: 'http://AI-desktop:34066/', host_ai_desktop__34170: 'http://AI-desktop:34170/',
+    host_ai_desktop__34293: 'http://AI-desktop:34293/', host_ai_desktop__34385: 'http://AI-desktop:34385/',
+    host_ai_desktop__34416: 'http://AI-desktop:34416/', host_ai_desktop__34456: 'http://AI-desktop:34456/',
+    host_ai_desktop__34461: 'http://AI-desktop:34461/', host_ai_desktop__34545: 'http://AI-desktop:34545/',
+    host_ai_desktop__34569: 'http://AI-desktop:34569/', host_ai_desktop__34599: 'http://AI-desktop:34599/',
+    host_ai_desktop__34964: 'http://AI-desktop:34964/', host_ai_desktop__34971: 'http://AI-desktop:34971/',
+    host_ai_desktop__35036: 'http://AI-desktop:35036/', host_ai_desktop__35084: 'http://AI-desktop:35084/',
+    host_ai_desktop__35223: 'http://AI-desktop:35223/', host_ai_desktop__35239: 'http://AI-desktop:35239/',
+    host_ai_desktop__35511: 'http://AI-desktop:35511/', host_ai_desktop__35892: 'http://AI-desktop:35892/',
+    host_ai_desktop__35914: 'http://AI-desktop:35914/', host_ai_desktop__35984: 'http://AI-desktop:35984/',
+    host_ai_desktop__36017: 'http://AI-desktop:36017/', host_ai_desktop__36023: 'http://AI-desktop:36023/',
+    host_ai_desktop__36091: 'http://AI-desktop:36091/', host_ai_desktop__36116: 'http://AI-desktop:36116/',
+    host_ai_desktop__36144: 'http://AI-desktop:36144/', host_ai_desktop__36396: 'http://AI-desktop:36396/',
+    host_ai_desktop__36682: 'http://AI-desktop:36682/', host_ai_desktop__36804: 'http://AI-desktop:36804/',
+    host_ai_desktop__36890: 'http://AI-desktop:36890/', host_ai_desktop__36917: 'http://AI-desktop:36917/',
+    host_ai_desktop__36993: 'http://AI-desktop:36993/', host_ai_desktop__37280: 'http://AI-desktop:37280/',
+    host_ai_desktop__37296: 'http://AI-desktop:37296/', host_ai_desktop__37597: 'http://AI-desktop:37597/',
+    host_ai_desktop__37625: 'http://AI-desktop:37625/', host_ai_desktop__37873: 'http://AI-desktop:37873/',
+    host_ai_desktop__37882: 'http://AI-desktop:37882/', host_ai_desktop__37886: 'http://AI-desktop:37886/',
+    host_ai_desktop__37966: 'http://AI-desktop:37966/', host_ai_desktop__37984: 'http://AI-desktop:37984/',
+    host_ai_desktop__38282: 'http://AI-desktop:38282/', host_ai_desktop__38436: 'http://AI-desktop:38436/',
+    host_ai_desktop__38556: 'http://AI-desktop:38556/', host_ai_desktop__38646: 'http://AI-desktop:38646/',
+    host_ai_desktop__38689: 'http://AI-desktop:38689/', host_ai_desktop__38755: 'http://AI-desktop:38755/',
+    host_ai_desktop__38796: 'http://AI-desktop:38796/', host_ai_desktop__39069: 'http://AI-desktop:39069/',
+    host_ai_desktop__39178: 'http://AI-desktop:39178/', host_ai_desktop__39201: 'http://AI-desktop:39201/',
+    host_ai_desktop__39274: 'http://AI-desktop:39274/', host_ai_desktop__39327: 'http://AI-desktop:39327/',
+    host_ai_desktop__39393: 'http://AI-desktop:39393/', host_ai_desktop__39443: 'http://AI-desktop:39443/',
+    host_ai_desktop__39478: 'http://AI-desktop:39478/', host_ai_desktop__39499: 'http://AI-desktop:39499/',
+    host_ai_desktop__39551: 'http://AI-desktop:39551/', host_ai_desktop__39578: 'http://AI-desktop:39578/',
+    host_ai_desktop__39599: 'http://AI-desktop:39599/', host_ai_desktop__39786: 'http://AI-desktop:39786/',
+    host_ai_desktop__39820: 'http://AI-desktop:39820/', host_ai_desktop__39826: 'http://AI-desktop:39826/',
+    host_ai_desktop__39910: 'http://AI-desktop:39910/', host_ai_desktop__40033: 'http://AI-desktop:40033/',
+    host_ai_desktop__40080: 'http://AI-desktop:40080/', host_ai_desktop__40185: 'http://AI-desktop:40185/',
+    host_ai_desktop__40193: 'http://AI-desktop:40193/', host_ai_desktop__40611: 'http://AI-desktop:40611/',
+    host_ai_desktop__40651: 'http://AI-desktop:40651/', host_ai_desktop__40682: 'http://AI-desktop:40682/',
+    host_ai_desktop__40804: 'http://AI-desktop:40804/', host_ai_desktop__40858: 'http://AI-desktop:40858/',
+    host_ai_desktop__41017: 'http://AI-desktop:41017/', host_ai_desktop__41156: 'http://AI-desktop:41156/',
+    host_ai_desktop__41215: 'http://AI-desktop:41215/', host_ai_desktop__41268: 'http://AI-desktop:41268/',
+    host_ai_desktop__41387: 'http://AI-desktop:41387/', host_ai_desktop__41433: 'http://AI-desktop:41433/',
+    host_ai_desktop__41473: 'http://AI-desktop:41473/', host_ai_desktop__41602: 'http://AI-desktop:41602/',
+    host_ai_desktop__41673: 'http://AI-desktop:41673/', host_ai_desktop__41901: 'http://AI-desktop:41901/',
+    host_ai_desktop__41907: 'http://AI-desktop:41907/', host_ai_desktop__42049: 'http://AI-desktop:42049/',
+    host_ai_desktop__42109: 'http://AI-desktop:42109/', host_ai_desktop__42157: 'http://AI-desktop:42157/',
+    host_ai_desktop__42159: 'http://AI-desktop:42159/', host_ai_desktop__42423: 'http://AI-desktop:42423/',
+    host_ai_desktop__42476: 'http://AI-desktop:42476/', host_ai_desktop__42539: 'http://AI-desktop:42539/',
+    host_ai_desktop__42568: 'http://AI-desktop:42568/', host_ai_desktop__42638: 'http://AI-desktop:42638/',
+    host_ai_desktop__42854: 'http://AI-desktop:42854/', host_ai_desktop__43318: 'http://AI-desktop:43318/',
+    host_ai_desktop__43647: 'http://AI-desktop:43647/', host_ai_desktop__43734: 'http://AI-desktop:43734/',
+    host_ai_desktop__43876: 'http://AI-desktop:43876/', host_ai_desktop__44070: 'http://AI-desktop:44070/',
+    host_ai_desktop__44115: 'http://AI-desktop:44115/', host_ai_desktop__44229: 'http://AI-desktop:44229/',
+    host_ai_desktop__44274: 'http://AI-desktop:44274/', host_ai_desktop__44476: 'http://AI-desktop:44476/',
+    host_ai_desktop__44486: 'http://AI-desktop:44486/', host_ai_desktop__44502: 'http://AI-desktop:44502/',
+    host_ai_desktop__44570: 'http://AI-desktop:44570/', host_ai_desktop__44615: 'http://AI-desktop:44615/',
+    host_ai_desktop__44649: 'http://AI-desktop:44649/', host_ai_desktop__44754: 'http://AI-desktop:44754/',
+    host_ai_desktop__44900: 'http://AI-desktop:44900/', host_ai_desktop__44910: 'http://AI-desktop:44910/',
+    host_ai_desktop__45020: 'http://AI-desktop:45020/', host_ai_desktop__45216: 'http://AI-desktop:45216/',
+    host_ai_desktop__45222: 'http://AI-desktop:45222/', host_ai_desktop__45237: 'http://AI-desktop:45237/',
+    host_ai_desktop__45307: 'http://AI-desktop:45307/', host_ai_desktop__45308: 'http://AI-desktop:45308/',
+    host_ai_desktop__45435: 'http://AI-desktop:45435/', host_ai_desktop__45465: 'http://AI-desktop:45465/',
+    host_ai_desktop__45472: 'http://AI-desktop:45472/', host_ai_desktop__45523: 'http://AI-desktop:45523/',
+    host_ai_desktop__45616: 'http://AI-desktop:45616/', host_ai_desktop__45652: 'http://AI-desktop:45652/',
+    host_ai_desktop__45723: 'http://AI-desktop:45723/', host_ai_desktop__45889: 'http://AI-desktop:45889/',
+    host_ai_desktop__45963: 'http://AI-desktop:45963/', host_ai_desktop__46088: 'http://AI-desktop:46088/',
+    host_ai_desktop__46219: 'http://AI-desktop:46219/', host_ai_desktop__46251: 'http://AI-desktop:46251/',
+    host_ai_desktop__46290: 'http://AI-desktop:46290/', host_ai_desktop__46305: 'http://AI-desktop:46305/',
+    host_ai_desktop__46345: 'http://AI-desktop:46345/', host_ai_desktop__46384: 'http://AI-desktop:46384/',
+    host_ai_desktop__46549: 'http://AI-desktop:46549/', host_ai_desktop__46616: 'http://AI-desktop:46616/',
+    host_ai_desktop__46858: 'http://AI-desktop:46858/'}
+rosversion: '1.12.12
+
+  '
+run_id: adcc6106-25ff-11e8-b22a-930ce9c021e4
+steer_control:
+  GLBflagOpenCalib: 0
+  gainsBack: {Kd: 0.0, Ki: 0.1, Kp: 3.0, Ts_steer: 0.1, distPreview: 6.0, pure: 0.0}
+  gainsForward: {Kd: 0.0, Ki: 0.1, Kp: 3.0, Ts_steer: 0.1, distPreview: 6.0, pure: 0.0}
+velocity_control:
+  CALIBRTVEL: {manu_vel: 10.0}
+  GLBflagOpenCalib: 1

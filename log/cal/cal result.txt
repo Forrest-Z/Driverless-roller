@@ -1,0 +1,26 @@
+20171228
+csd
+1
+('first path: ', 'errMax', 0.52771844312267047, 'errMean', 0.26873318250362493)
+('second path: ', 'errMax', 0.47035151359176747, 'errMean', 0.26834500856330507)
+minDistErr->maxDistErr:  -36.2748191643 -> 2.38386758726
+minEta->maxEta:  -0.273211904098 -> 0.423038469698
+minDelta->maxDelta:  -0.0341967339757 -> 0.38155023338
+
+('first path: ', 'errMax', 0.56554831089354241, 'errMean', 0.28204001250508653)
+('second path: ', 'errMax', 0.65118256057908797, 'errMean', 0.37228950493894769)
+minDistErr->maxDistErr:  -36.2748191643 -> 2.45419858569
+minEta->maxEta:  -1.42320929494 -> 0.413199300328
+minDelta->maxDelta:  -1.42320929494 -> 1.11227016153
+
+In [4]: 
+
+
+20171221
+1221
+    ('first path: ', 'errMax', 0.26947842326438531, 'errMean', 0.19361051583786398)
+    ('second path: ', 'errMax', 0.73356105406392835, 'errMean', 0.56348233502580103)
+bezier
+    ('first path: ', 'errMax', 0.2743750578610461, 'errMean', 0.24150906973065481)
+line
+    ('first path: ', 'errMax', 0.302313932051608, 'errMean', 0.24102834338421028)

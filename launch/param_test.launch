@@ -1,0 +1,8 @@
+<launch>
+	<rosparam command="load" file="$(find campus_driving)/params/dump.yaml" />
+
+	<node pkg="campus_driving" name="test" type="test.py" output="screen"/>
+
+	
+</launch> 
+

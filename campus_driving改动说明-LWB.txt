@@ -1,0 +1,9 @@
+1.将mapEndPointDrawLWB.py     CAN_DriverLWB.py    local_planningLWB.py     放进src文件夹；
+2.将paramLWB.yaml 放进   params文件夹；
+
+
+我这边launch不知道和现在工程车上的launch文件是不是相同，把你原来的文件里面  ,
+<node pkg="campus_driving" name="CAN_Driver" type="CAN_Driver.py"  />  改为	<node pkg="campus_driving" name="CAN_Driver" type="CAN_DriverLWB.py"  />
+<node pkg="campus_driving" name="local_planning" type="local_planning.py" />   改为   <node pkg="campus_driving" name="local_planning" type="local_planningLWB.py" /> 
+
+或者把出山店运行的launch发给我，我改好再发给你也行
